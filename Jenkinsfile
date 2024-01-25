@@ -1,10 +1,14 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'Prajval', defaultValue: '')
+    }
 
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+                echo "${params.Prajval}"
             }
         }
         
