@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Hello') {
             when {
-                "${params.condition}"='True'
+                "${params.condition}" == True
                 }
             steps {
                 echo 'Hello World'
