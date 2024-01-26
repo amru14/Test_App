@@ -7,8 +7,10 @@ pipeline {
     stages {
         stage('Hello') {
             when {
+                expression{
                 "${params.condition}" == True
                 }
+            }
             steps {
                 echo 'Hello World'
                 echo "${params.Prajval}"
