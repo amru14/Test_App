@@ -6,6 +6,9 @@ pipeline {
 
     stages {
         stage('Hello') {
+            where{
+                "${params.condition}"='True'
+                }
             steps {
                 echo 'Hello World'
                 echo "${params.Prajval}"
