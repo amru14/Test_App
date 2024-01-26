@@ -8,7 +8,7 @@ pipeline {
         stage('Hello') {
             when {
                 expression{
-                "${params.condition}" == True
+                "${params.condition}" == 'True'
                 }
             }
             steps {
