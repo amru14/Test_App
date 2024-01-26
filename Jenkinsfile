@@ -6,7 +6,7 @@ pipeline {
 
     stages {
         stage('Hello') {
-            where{
+            when {
                 "${params.condition}"='True'
                 }
             steps {
